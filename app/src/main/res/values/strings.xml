@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TraditionalFoodIndonesian</string>
+    <string name="about">About</string>
+    <string name="bahan_makanan">Bahan : </string>
+    <string name="bumbu_makanan">Bumbu : </string>
+    <string name="pelengkap_makanan">Pelengkap : </string>
+    <string name="cara_membuat_makanan">Cara Membuat : </string>
+    <string name="details_makanan">Resep Makanan</string>
+    <string name="personal_name">Denis Arya Saputra</string>
+    <string name="personal_email">dennisarya01@gmail.com</string>
 </resources>

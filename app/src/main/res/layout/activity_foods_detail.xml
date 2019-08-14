@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlTheme"
+
+    tools:context=".view.FoodsDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar"
+        app:elevation="@null">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme.Toolbar"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            app:contentInsetStart="@null"
+            app:elevation="@null">
+
+            <TextView
+                android:text="@string/details_makanan"
+                android:id="@+id/txt_detail_resep"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/svDetails"
+        android:layout_below="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="36dp"
+            android:id="@+id/container">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_leave_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/shape_white"
+                card_view:cardElevation="5dp"
+                card_view:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_white"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/txtNamaMakanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack" />
+
+                    <ImageView
+                        android:id="@+id/img_details_makanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:adjustViewBounds="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_below="@id/txtNamaMakanan"
+                        android:scaleType="fitXY"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_separator_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_below="@id/img_details_makanan"/>
+
+                    <TextView
+                        android:id="@+id/label_bahanMakanan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:layout_below="@id/txt_separator_6"
+                        android:text="@string/bahan_makanan"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/txtBahanMakanan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/label_bahanMakanan"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textColor="@color/rsvpLightGrey"/>
+
+                    <TextView
+                        android:id="@+id/txt_separator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_below="@id/txtBahanMakanan"/>
+
+                    <TextView
+                        android:id="@+id/label_bumbu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:layout_below="@id/txt_separator"
+                        android:text="@string/bumbu_makanan"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/txtBumbu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/label_bumbu"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textColor="@color/rsvpLightGrey"/>
+
+                    <TextView
+                        android:id="@+id/txt_separator_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_below="@id/txtBumbu"/>
+
+                    <TextView
+                        android:id="@+id/label_pelengkap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:layout_below="@id/txt_separator_2"
+                        android:text="@string/pelengkap_makanan"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/txtPelengkap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/label_pelengkap"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textColor="@color/rsvpLightGrey"/>
+
+                    <TextView
+                        android:id="@+id/txt_separator_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_below="@id/txtPelengkap"/>
+
+                    <TextView
+                        android:id="@+id/label_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:layout_below="@id/txt_separator_3"
+                        android:text="@string/cara_membuat_makanan"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/txt_details_makanan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/label_details"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textColor="@color/rsvpLightGrey"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
